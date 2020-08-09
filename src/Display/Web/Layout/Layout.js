@@ -7,11 +7,7 @@ import {
   Form,
   Nav,
   Button,
-<<<<<<< HEAD
   InputGroup,
-=======
-  Alert
->>>>>>> 35e33dc266005d3a7da23457341ded5c978e44fb
 } from "react-bootstrap";
 import AppBar from "@material-ui/core/AppBar";
 import NotificationsIcon from "@material-ui/icons/Notifications";
@@ -200,7 +196,7 @@ class Layout extends React.Component {
           variant="light"
           expand="md"
           style={{ color: "white" }}
-          className="mynav vanish"
+          className="mynav vanish navbar-top-first"
         >
           <Container>
             <Navbar.Brand
@@ -332,7 +328,6 @@ class Layout extends React.Component {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-<<<<<<< HEAD
         <div className="mobile">
           <AppBar position="static">
             <Toolbar>
@@ -405,15 +400,6 @@ class Layout extends React.Component {
         </div>
         <Container id="cont-1" fluid>
           {/* <Col className="coll-hidden" xs={1}>
-=======
-        <Alert variant="danger" className="text-center">
-          This website is under active development. Disclaimer, this is not a
-          scanlator or aggregator website. The remodeled version will be
-          uploaded in coming weeks. Stay tuned.
-        </Alert>
-        <Row noGutters>
-          <Col className="coll-hidden" xs={1}>
->>>>>>> 35e33dc266005d3a7da23457341ded5c978e44fb
             <Sidebar />
           </Col> */}
 
