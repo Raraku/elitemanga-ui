@@ -48,6 +48,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import AddToHomeScreenIcon from "@material-ui/icons/AddToHomeScreen";
 import SystemUpdateAltIcon from "@material-ui/icons/SystemUpdateAlt";
+import work from "./tenor.gif";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -345,8 +346,13 @@ class Layout extends React.Component {
           </DialogTitle>
           <DialogContent>
             <DialogContentText>
-              Don't be sad though. Just install this app and we will notify you
-              when we launch. There are three ways to install our site:
+              <div className="progress-image-div">
+                <img className="img-work" alt="progress" src={work} />
+              </div>
+              <p>
+                Don't be sad though. Just install this app and we will notify
+                you when we launch. There are three ways to install our site:
+              </p>
               <Row>
                 <Col className="we-are-sorry" xs={4}>
                   On Mobile: <AddToHomeScreenIcon />
@@ -361,8 +367,8 @@ class Layout extends React.Component {
               Depending on your platform, one of these icons above should be in
               your url bar. Alternatively, you can install it by "Adding to Home
               Screen".
-              <div className="text-right">
-                Dōmo arigatōgozaimashita. See you soon
+              <div className="text-right mt-2">
+                ~Dōmo arigatōgozaimashita. See you soon
               </div>
             </DialogContentText>
           </DialogContent>

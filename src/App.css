@@ -1078,3 +1078,14 @@ body > div.prompt > div.MuiDialog-container.MuiDialog-scrollPaper > div {
   justify-content: center;
   align-items: center;
 }
+.img-work {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.progress-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
