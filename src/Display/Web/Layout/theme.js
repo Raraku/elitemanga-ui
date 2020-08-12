@@ -12,6 +12,9 @@ export const lightTheme = {
   "--table-head": "inherit",
   "--nav-mobile-color": "rgba(0, 0, 0, 0.54)",
   "--color-solid-alt-dropdown": "rgba(0, 0, 0, 0.54)",
+  "--placeholder": "#fff",
+  "--left-rand-color": "teal",
+  "--transparent": "#fff",
 };
 export const darkTheme = {
   "--color-solid": "rgb(228,230,235)",
@@ -29,4 +32,7 @@ export const darkTheme = {
   "--nav-mobile-color": "rgba(255,255,255, 0.54)",
   "--table-head": "white",
   "--color-solid-alt-dropdown": "rgba(255, 255, 255, 0.54)",
+  "--placeholder": "#272727",
+  "--transparent": "transparent",
+  "--left-rand-color": "#272727",
 };

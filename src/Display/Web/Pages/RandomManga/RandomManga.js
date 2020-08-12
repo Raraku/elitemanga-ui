@@ -124,8 +124,10 @@ const RandomManga = (props) => {
         </Col>
         <Col className="right-rand " md={6} xs={12}>
           <div className="pt-3 rand-div-1">
-            <FormControl component="fieldset">
-              <FormLabel component="legend">Filter</FormLabel>
+            <FormControl className="different" component="fieldset">
+              <FormLabel component="legend" className="different">
+                Filter
+              </FormLabel>
               <RadioGroup
                 aria-label="gender"
                 name="gender1"

@@ -66,15 +66,15 @@ const FooterPage = (props) => {
             <div className="footer-c">How our Reviews work</div>
             <div className="footer-c">Privacy Policy</div>
             <div className="footer-c">Terms of service</div>
-            <div className="footer-c">Donate to us</div>
+            <div className="footer-c last">Donate to us</div>
           </div>
         </div>
 
-        <div className="footer-copyright d-block text-center py-3">
-          <Container fluid>
-            <div className="mr-1 footer-copy pr-1 lom">Privacy Policy</div>
-            <div className="mr-1 footer-copy pr-1 lom">Terms of Service</div>
-            <div className="footer-copy">
+        <div className="text-center py-3">
+          <Container className="footer-b" fluid>
+            <div className="mr-1 footer-c lom">Privacy Policy</div>
+            <div className="mr-1 footer-c lom">Terms of Service</div>
+            <div className="footer-c last">
               &copy; {new Date().getFullYear()} Copyright:{" "}
               <a id="foot" href="https://www.elitemanga.net">
                 {" "}

@@ -117,7 +117,7 @@ const Profile = (props) => {
               src={displayPicture}
               className="avatar-user"
             />
-            <p>{username}</p>
+            <p className="change">{username}</p>
             <Snackbar
               anchorOrigin={{
                 vertical: "bottom",
