@@ -12,12 +12,20 @@ import UserReview from "./../UserReview/UserReviews";
 import { Row, Col } from "react-bootstrap";
 import { Paper } from "@material-ui/core";
 import Tooltip from "@material-ui/core/Tooltip";
+import { Typography } from "antd";
+import EditIcon from "@material-ui/icons/Edit";
 import Stats from "./Stats";
+import TextField from "@material-ui/core/TextField";
+import AddAPhotoIcon from "@material-ui/icons/AddAPhoto";
+
+const { Title } = Typography;
 
 const Profile = (props) => {
   const [displayPicture, setPicture] = useState("");
   const [ServerPicture, setServerPicture] = useState("");
   const [loading, setLoading] = useState(true);
+  const [slug, setSlug] = useState("");
+  const [isInput, setIsInput] = useState(false);
   const [username, setUsername] = useState("");
   const [uploadPicture, shouldUpload] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -31,17 +39,22 @@ const Profile = (props) => {
   };
 
   const onDrop = (event) => {
+    setIsInput(false);
     var form_data = new FormData();
-    form_data.append(
-      "avatar",
-      event.target.files[0],
-      event.target.files[0].name
-    );
+    if (event.target.files !== null) {
+      form_data.append(
+        "avatar",
+
+        event.target.files[0],
+        event.target.files[0].name
+      );
+
+      setPicture(URL.createObjectURL(event.target.files[0]));
+      setServerPicture(event.target.files[0]);
+    }
     form_data.append("username", username);
-    setPicture(URL.createObjectURL(event.target.files[0]));
-    setServerPicture(event.target.files[0]);
     axiosConfig
-      .put("/profile/", form_data, {
+      .patch("/profile-upload/", form_data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -75,6 +88,7 @@ const Profile = (props) => {
       .get("/profile/")
       .then((res) => {
         setUsername(res.data.username);
+        setSlug(res.data.slug);
         if (res.data.avatar !== null) {
           setPicture(res.data.avatar);
         }
@@ -84,40 +98,53 @@ const Profile = (props) => {
         console.log(err);
       });
   }, []);
-
+  const changeType = (str) => {
+    setIsInput(true);
+  };
+  const onChange = (event) => {
+    setUsername(event.target.value);
+  };
   return (
     <Row className="mr-0">
       <Col className="pt-0 pr-0" xs={12} md={3}>
         <Paper className="pb-3 mb-3">
-          <h1 className="profile-title">{username}'s Profile</h1>
-          {uploadPicture && (
-            <div>
-              <div className="fileUploader">
-                <div className="fileContainer">
-                  <img src={Logo} className="uploadIcon" alt="Upload Icon" />
-                  <p className="">Max file size: 5mb, accepted: jpg|gif|png</p>
-                  <div className="errorsContainer"></div>
-                  <label for="upload-photo" className="chooseFileButton ">
-                    Choose image
-                  </label>
-                  <input
-                    onChange={onDrop}
-                    id="upload-photo"
-                    type="file"
-                    name=""
-                    accept="image/*"
-                  />
-                </div>
-              </div>
-            </div>
-          )}
+          <h1 className="profile-title">
+            {!isInput ? (
+              <>
+                {username}'s Profile
+                <IconButton onClick={changeType}>
+                  <EditIcon fontSize="large" />
+                </IconButton>
+              </>
+            ) : (
+              <TextField onChange={onChange} onBlur={onDrop} value={username} />
+            )}
+          </h1>
           <div className="image-div">
-            <Avatar
-              alt="user avatar"
-              src={displayPicture}
-              className="avatar-user"
-            />
+            <div className="my-user-avatar">
+              <Avatar
+                alt="user avatar"
+                src={displayPicture}
+                className="avatar-user"
+              />
+              <label for="upload-photo" className="chooseFileButton ">
+                <AddAPhotoIcon />
+              </label>
+              <input
+                onChange={onDrop}
+                id="upload-photo"
+                type="file"
+                name=""
+                accept="image/*"
+              />
+            </div>
             <p className="change">{username}</p>
+            <TextField
+              id="outlined-basic"
+              label="Your Personal Invite Link"
+              value={`${window.location.href.slice(0, -9)}/invites/${slug}/`}
+              variant="outlined"
+            />
             <Snackbar
               anchorOrigin={{
                 vertical: "bottom",
@@ -132,17 +159,6 @@ const Profile = (props) => {
                 Your picture has been uploaded
               </Alert>
             </Snackbar>
-            <Button variant="contained" color="primary" onClick={handleClose}>
-              {!uploadPicture ? (
-                "Upload new avatar"
-              ) : (
-                <Tooltip title="Close">
-                  <IconButton>
-                    <CloseIcon fontSize="small" style={{ color: "white" }} />{" "}
-                  </IconButton>
-                </Tooltip>
-              )}
-            </Button>
           </div>
           <Stats />
         </Paper>

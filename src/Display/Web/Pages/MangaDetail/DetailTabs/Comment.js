@@ -12,6 +12,7 @@ import { Row, Col } from "react-bootstrap";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
+import Avatar from "@material-ui/core/Avatar";
 import EditIcon from "@material-ui/icons/Edit";
 
 const Review = (props) => {
@@ -85,7 +86,7 @@ const Review = (props) => {
 
   return (
     <Comment>
-      <Comment.Avatar as="a" src={props.author.avatar} />
+      <Avatar src={props.author.avatar_thumbnail} />
       <Comment.Content>
         <Comment.Author as="a">{props.author.username}</Comment.Author>
         {/* <Comment.Metadata>

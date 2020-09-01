@@ -14,6 +14,8 @@ import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
 import Tooltip from "@material-ui/core/Tooltip";
+import GoogleBtn from "./../Oauth/google";
+import FacebookBtn from "./../Oauth/facebook";
 
 const validEmailRegex = RegExp(
   /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
@@ -135,6 +137,10 @@ class Login extends React.Component {
             </Button>{" "}
           </form>
           <div className="text-center mt-3">Or Login with</div>
+          <div className="login-options">
+            <GoogleBtn />
+            <FacebookBtn />
+          </div>
           <div className="sign-login text-center">
             <p className="text-muted login-text text-center">
               Not a member?{" "}

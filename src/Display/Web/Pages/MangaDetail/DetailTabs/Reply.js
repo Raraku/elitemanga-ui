@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Comment } from "semantic-ui-react";
+import Avatar from "@material-ui/core/Avatar";
 
 const Reply = (props) => {
   return (
     <Comment>
-      <Comment.Avatar as="a" src={props.author.avatar} />
+      <Avatar src={props.author.avatar_thumbnail} />
       <Comment.Content>
         <Comment.Author as="a">{props.author.username}</Comment.Author>
 

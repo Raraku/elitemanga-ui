@@ -4,12 +4,22 @@
   color: var(--color-solid);
   --background: white;
   --footer: none;
+  --color-alt-light: rgba(0, 0, 0, 0.4);
   --tab-background: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 /* //Themeing */
 .ui.card > .content > .header,
 .ui.cards > .card > .content > .header {
   color: var(--color-solid);
+}
+html,
+body {
+  height: 100% !important;
 }
 .ui.cards a.card:hover,
 .ui.link.card:hover,
@@ -27,13 +37,19 @@ a.ui.card:hover {
 .list-excerpt,
 .list-item-title,
 .list-body,
-.accordion.ui.fluid.styled,
-.accordion.ui.fluid.styled > div.title,
 .font-review,
 .statistic > .label,
 .list-forgotten,
 .chameleon {
   color: var(--color-solid) !important;
+}
+.accordion.ui.fluid.styled,
+.accordion.ui.fluid.styled > div.title {
+  color: var(--color-solid-alt-dropdown);
+}
+.accordion.ui.fluid.styled:hover,
+.accordion.ui.fluid.styled > div.title:hover {
+  color: var(--color-solid);
 }
 
 .ui.card,

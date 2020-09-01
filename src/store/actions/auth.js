@@ -142,7 +142,7 @@ export const authSignup = (username, email, password1, password2) => {
         localStorage.setItem("token", token);
         localStorage.setItem("expirationDate", expirationDate);
         dispatch(authSuccess(token));
-
+        axiosConfig.get("/verify-email/");
         dispatch(checkAuthTimeout(3600));
       })
       .catch((error) => {

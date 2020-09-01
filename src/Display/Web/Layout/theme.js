@@ -15,6 +15,7 @@ export const lightTheme = {
   "--placeholder": "#fff",
   "--left-rand-color": "teal",
   "--transparent": "#fff",
+  "--color"
 };
 export const darkTheme = {
   "--color-solid": "rgb(228,230,235)",

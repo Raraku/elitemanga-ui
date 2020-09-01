@@ -5,7 +5,6 @@ import RandomManga from "./Pages/RandomManga/RandomManga";
 import Test from "./Test";
 import Login from "./Pages/Login/Login";
 import SignUp from "./Pages/Signup/SignStepper";
-import Viewer from "./Pages/Viewer/Viewer";
 import ContactForm from "./Pages/ContactForm/ContactForm";
 import MangaDetail from "./Pages/MangaDetail/MangaDetail";
 import MangaList from "./Pages/MangaList/MangaList";
@@ -19,6 +18,9 @@ import ListDetail from "./Pages/ListDetail/ListDetail";
 import Profile from "./Pages/Profile/Profile";
 import axiosConfig from "./../HOC/axiosConfig";
 import Announcement from "./Pages/Announcements/AnnouncementDetail";
+import GoogleBtn from "./Pages/Oauth/google";
+import FacebookBtn from "./Pages/Oauth/facebook";
+import Invite from "./Pages/Invites/Invites";
 
 const WebRouter = () => {
   (function () {
@@ -53,8 +55,11 @@ const WebRouter = () => {
       <Route path="/recently-read/" component={RecentManga} />
       <Route path="/profile/" component={Profile} />
       <Route path="/signup/" component={SignUp} />
+      <Route exact path="/invites/" component={Invite} />
+      <Route path="/invites/:invite_link/" component={Invite} />
       <Route path="/hot-manga/" component={HotManga} />
       <Route path="/user-reviews/" component={UserReviews} />
+      <Route path="/gb/" component={FacebookBtn} />
       <Route
         exact
         path="/anime/:manga/"

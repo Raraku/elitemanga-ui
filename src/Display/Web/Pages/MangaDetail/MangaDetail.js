@@ -46,6 +46,7 @@ class MangaDetail extends React.Component {
               mobile={window.innerWidth < 768}
               myclass="break-manga"
               loading={this.props.loading}
+              adaptation={this.props.manga.adaptation}
               title={this.props.manga.title}
               alias={this.props.manga.alias}
               author={this.props.manga.author}
@@ -59,6 +60,7 @@ class MangaDetail extends React.Component {
             />
           )}
           <br />
+
           <Info
             data={this.props.manga}
             manga={this.props.match.params.manga}
@@ -66,6 +68,7 @@ class MangaDetail extends React.Component {
           />
           <br />
           <SimilarManga
+            adaptation={this.props.manga.adaptation}
             manga={this.props.match.params.manga}
             id={this.props.manga.id}
           />

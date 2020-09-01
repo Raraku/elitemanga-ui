@@ -243,4 +243,12 @@ button:focus {
   .ui.secondary.pointing.menu .item {
     padding: 0.85714286em 0.8em !important;
   }
+  .login-paper {
+    width: 100%;
+    position: relative;
+    height: 90%;
+  }
+  .login-anchor {
+    height: 85vh;
+  }
 }

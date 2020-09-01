@@ -13,6 +13,7 @@ import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
+import GoogleBtn from "./../Oauth/google";
 
 const validateForm = (errors) => {
   let valid = true;
@@ -46,6 +47,7 @@ class Login extends React.Component {
     }
   }
   handlesubmit = (event) => {
+    event.preventDefault();
     if (validateForm(this.state.errors)) {
       this.props.onAuth(
         this.state.username,
@@ -195,6 +197,9 @@ class Login extends React.Component {
               Signup
             </Button>
           </form>
+          <div className="login-options mt-3">
+            <GoogleBtn />
+          </div>
           <div className="sign-login text-center">
             <p className="text-muted login-text text-center">
               Already a member?{" "}

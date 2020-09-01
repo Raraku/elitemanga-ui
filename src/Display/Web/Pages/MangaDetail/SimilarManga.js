@@ -54,7 +54,7 @@ class SimilarManga extends React.Component {
           </div>
           {!this.state.loading ? (
             <div>
-              <Row className="flex-row wrapper flex-nowrap">
+              <Row className="flex-row wrapper flex-nowrap similar-wrap">
                 <div>
                   <CardGroup className="excluded" itemsPerRow={8}>
                     {this.state.manga.slice(0, 8).map((manga) => (

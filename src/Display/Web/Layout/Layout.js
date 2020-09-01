@@ -49,6 +49,7 @@ import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import AddToHomeScreenIcon from "@material-ui/icons/AddToHomeScreen";
 import SystemUpdateAltIcon from "@material-ui/icons/SystemUpdateAlt";
 import work from "./tenor.gif";
+import Alert from "@material-ui/lab/Alert";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -195,7 +196,7 @@ class Layout extends React.Component {
   };
 
   render() {
-    console.log(this.state.new);
+    console.log(this.props);
 
     return (
       <div>
@@ -307,7 +308,7 @@ class Layout extends React.Component {
                               className="navatar"
                               src={
                                 this.state.profile !== null
-                                  ? this.state.profile.avatar
+                                  ? this.state.profile.avatar_thumbnail
                                   : ""
                               }
                             />
@@ -338,7 +339,7 @@ class Layout extends React.Component {
         <Dialog
           TransitionComponent={Transition}
           className="pre-open-dialog"
-          open={true}
+          open={false}
           class="prompt"
         >
           <DialogTitle>
@@ -425,7 +426,8 @@ class Layout extends React.Component {
                             className="navatar"
                             src={
                               this.state.profile !== null
-                                ? this.state.profile.avatar
+                                ? this.state.profile.avatar_thumbnail ||
+                                  this.state.profile.social_avatar
                                 : ""
                             }
                           />
@@ -487,6 +489,15 @@ class Layout extends React.Component {
               </div>
             </Dialog>
             <Segment className="mt-2">
+              {this.state.profile !== null && (
+                <div>
+                  {this.state.profile.verified === false && (
+                    <Alert severity="warning">
+                      Please verify your email address
+                    </Alert>
+                  )}
+                </div>
+              )}
               {this.state.search ? (
                 <MangaSearch
                   selected={this.changeSearchStatus}

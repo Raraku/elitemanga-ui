@@ -15,10 +15,7 @@ function MangaIcon(props) {
     A: "teal",
     B: "brown",
   };
-  const add_to_favorites = () => {
-    props.add_to_favorites();
-  };
-  useEffect(() => {});
+
   console.log(props.media_type);
   console.log(show);
   return (
@@ -79,21 +76,7 @@ function MangaIcon(props) {
             ) : (
               <div>
                 <Card.Text>{he.decode(props.description)}</Card.Text>
-                {props.is_favorite != undefined && (
-                  <div className="text-right">
-                    {props.is_favorite ? (
-                      <BookmarkIcon
-                        onClick={add_to_favorites}
-                        fontSize="large"
-                      />
-                    ) : (
-                      <BookmarkBorderIcon
-                        onClick={add_to_favorites}
-                        fontSize="large"
-                      />
-                    )}
-                  </div>
-                )}
+
                 <Card.Subtitle className="text-muted">
                   {props.author}
                 </Card.Subtitle>

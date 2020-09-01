@@ -8,7 +8,7 @@
   --theme-color: teal;
   --color-surface: #fff;
   --color-solid: #000;
-  --header-color: teal;
+  --header-color: rgba(178, 34, 34, 0);
   --input-color: inherit;
   --background: white;
   --new-box: none;
@@ -18,7 +18,7 @@
   --color-dropdown-hover: teal;
   --color-dropdown-text: white;
   --placeholder: #fff;
-  --color-dropdown-mini-text: rgba(255, 255, 255, 0.4);
+  --color-dropdown-mini-text: teal;
   --color-solid-alt-dropdown: rgba(0, 0, 0, 0.54);
   --transparent: #fff;
   --left-rand-color: teal;
@@ -62,7 +62,6 @@ input {
 }
 .profile-title {
   padding-top: 0.5em;
-  padding-left: 1em;
 }
 .text-warning {
   color: red;
@@ -801,6 +800,7 @@ div.ui.eight.cards > a.ui.card {
 .signup-form {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 #upload-photo {
@@ -892,6 +892,20 @@ div.ui.eight.cards > a.ui.card {
   width: 55vmin;
   position: relative;
   height: 90%;
+}
+.login-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.kep-login-facebook {
+  padding: 10px !important;
+}
+.login-options > div,
+.login-options button {
+  width: 100%;
+  justify-content: center;
 }
 #my-cont > .ui.segment {
   position: relative;
@@ -1088,4 +1102,37 @@ body > div.prompt > div.MuiDialog-container.MuiDialog-scrollPaper > div {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+.my-user-avatar {
+  position: relative;
+}
+label[for="upload-photo"] {
+  position: absolute;
+  right: 0;
+  bottom: -0.5em;
+  color: teal;
+}
+.comment > div.MuiAvatar-root.MuiAvatar-circle {
+  float: left;
+}
+.ui.comments .comment > .MuiAvatar-root ~ .content {
+  margin-left: 3.5em;
+}
+.MuiFormLabel-root.Mui-focused {
+  color: var(--theme-color) !important;
+}
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: teal !important;
+}
+.MuiInput-underline:after {
+  border-color: teal !important;
+}
+
+.invite-first {
+  position: relative;
+  min-height: 30em;
+  display: table-cell;
+}
+.accordion-p {
+  color: var(--color-solid);
 }

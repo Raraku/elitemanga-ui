@@ -37,10 +37,13 @@ export default class AccordionExampleStandard extends React.Component {
               onClick={this.handleClick}
             >
               <Icon name="dropdown" />
-              Originality
+              Moments
             </Accordion.Title>
             <Accordion.Content active={activeIndex === 0}>
-              <p>{elitemangareview.originality}</p>
+              <p
+                className="accordion-p"
+                dangerouslySetInnerHTML={{ __html: elitemangareview.moment }}
+              ></p>
             </Accordion.Content>
             <Accordion.Title
               active={activeIndex === 1}
@@ -51,6 +54,12 @@ export default class AccordionExampleStandard extends React.Component {
               Characters
             </Accordion.Title>
             <Accordion.Content active={activeIndex === 1}>
+              <p
+                className="accordion-p"
+                dangerouslySetInnerHTML={{
+                  __html: elitemangareview.characters,
+                }}
+              ></p>
               <p>{elitemangareview.characters}</p>
             </Accordion.Content>
 
@@ -63,7 +72,10 @@ export default class AccordionExampleStandard extends React.Component {
               Plot
             </Accordion.Title>
             <Accordion.Content active={activeIndex === 2}>
-              <p>{elitemangareview.plot}</p>
+              <p
+                className="accordion-p"
+                dangerouslySetInnerHTML={{ __html: elitemangareview.plot }}
+              ></p>
             </Accordion.Content>
             <Accordion.Title
               active={activeIndex === 3}
@@ -74,17 +86,20 @@ export default class AccordionExampleStandard extends React.Component {
               {this.props.media_type == 0 ? "Art Quality" : "Animation Quality"}
             </Accordion.Title>
             <Accordion.Content active={activeIndex === 3}>
-              <p>{elitemangareview.quality}</p>
+              <p
+                className="accordion-p"
+                dangerouslySetInnerHTML={{ __html: elitemangareview.quality }}
+              ></p>
             </Accordion.Content>
           </Accordion>
           <Row>
             <Col xs={12} md={6}>
               <div className="mb-2 mt-5 d-flex review-div">
                 <div>
-                  <div className="font-review">Originality</div>
+                  <div className="font-review">Moments</div>
                   <div>
                     <Progress
-                      value={elitemangareview.originality_score}
+                      value={elitemangareview.moment_score}
                       total="10"
                       indicating
                       progress="ratio"

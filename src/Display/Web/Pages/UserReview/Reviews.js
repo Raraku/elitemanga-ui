@@ -8,7 +8,6 @@ import {
   Label,
   Grid,
 } from "semantic-ui-react";
-import Replies from "./Reply";
 import axios from "./../../../HOC/axiosConfig";
 import { Row, Col } from "react-bootstrap";
 import MangaIcon from "./../components/MangaCards/LastReadIcon";
@@ -16,6 +15,7 @@ import { connect } from "react-redux";
 import Typography from "@material-ui/core/Typography";
 import Rating from "@material-ui/lab/Rating";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
+import Avatar from "@material-ui/core/Avatar";
 
 const Review = (props) => {
   const [Reply, shouldReply] = useState(false);
@@ -82,7 +82,7 @@ const Review = (props) => {
     <Row className="rev-row">
       <Col className="mt-4 mb-1" xs={12} md={9}>
         <Comment className="rev-comment">
-          <Comment.Avatar as="a" src={props.author.avatar} />
+          <Avatar src={props.author.avatar_thumbnail} />
           <Comment.Content className="rev-content">
             <Comment.Author as="a">
               <span className="mobile">

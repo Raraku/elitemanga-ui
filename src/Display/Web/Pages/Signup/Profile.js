@@ -120,9 +120,15 @@ const Profile = (props) => {
           Your picture has been uploaded
         </Alert>
       </Snackbar>
-      <Button variant="contained" color="primary" onClick={handleClose}>
-        Skip for now
-      </Button>
+      <div className="text-center">
+        <Button variant="contained" color="primary" onClick={handleClose}>
+          Skip for now
+        </Button>
+        <Alert severity="warning">
+          We have sent you a verification email. Please verify as soon as
+          possible
+        </Alert>
+      </div>
     </div>
   );
 };

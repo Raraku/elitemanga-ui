@@ -306,12 +306,12 @@ class Comments extends React.Component {
             <MuiButton
               disabled={!valid || this.state.review === ""}
               variant="contained"
+              onClick={this.submitReview}
               className="e-button"
             >
               <EditIcon />
               Add Review
             </MuiButton>
-            \
           </Form>
         ) : (
           <Alert variant="danger">
