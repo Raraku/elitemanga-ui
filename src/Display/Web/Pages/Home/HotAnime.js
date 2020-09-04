@@ -22,7 +22,7 @@ class HotAnime extends React.Component {
     };
   }
   componentDidMount() {
-    axios.get("/animeinfo/get_top_7/").then((res) => {
+    axios.get("/animeinfo/get_weekly_manga/").then((res) => {
       this.setState({ anime: res.data, loading: false });
     });
   }
