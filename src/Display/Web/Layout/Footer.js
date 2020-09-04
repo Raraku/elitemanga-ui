@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Navbar } from "react-bootstrap";
 import { Link, withRouter } from "react-router-dom";
-import { ButtonGroup, Button } from "semantic-ui-react";
+import { ButtonGroup, Button, Icon } from "semantic-ui-react";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import RestoreIcon from "@material-ui/icons/Home";
@@ -36,6 +36,7 @@ const FooterPage = (props) => {
               circular
               className="mb-1"
               size="large"
+              href="https://www.facebook.com/Elitemanga-111366027365642/?modal=admin_todo_tour"
               color="facebook"
               icon="facebook"
             />
@@ -43,21 +44,24 @@ const FooterPage = (props) => {
               circular
               className="mb-1"
               size="large"
+              href="https://twitter.com/elitemanga1"
               color="twitter"
               icon="twitter"
             />{" "}
             <Button
               circular
-              className="md-1"
+              href="https://discord.gg/fzy7yS7"
+              className="md-1 discord"
               size="large"
+              style={{ color: "white", backgroundColor: "#7289da" }}
               icon="discord"
-              color="discord"
             />{" "}
             <Button
               circular
-              className="md-1"
+              href="https://www.reddit.com/r/elitemanga/"
+              className="md-1 reddit"
               size="large"
-              color="reddit"
+              style={{ color: "#ff4500" }}
               icon="reddit"
             />{" "}
           </div>

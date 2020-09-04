@@ -9,6 +9,9 @@ button:focus {
   .mobile {
     display: none !important;
   }
+  .a2-card-image {
+    max-height: 25vw !important;
+  }
   .ui.cards.excluded.two > .ui.card {
     width: calc(12.5% - 1em);
     margin-left: 0.5em;

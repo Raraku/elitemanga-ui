@@ -239,9 +239,7 @@ i.search.icon {
 .star-item {
   padding-left: 0 !important;
 }
-.a2-card-image {
-  height: 20vw;
-}
+
 .ui.secondary.pointing.menu .item {
   margin-left: auto;
   margin-right: auto;
@@ -1135,4 +1133,7 @@ label[for="upload-photo"] {
 }
 .accordion-p {
   color: var(--color-solid);
+}
+.discord {
+  background: #7289da;
 }
