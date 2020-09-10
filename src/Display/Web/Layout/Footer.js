@@ -61,7 +61,7 @@ const FooterPage = (props) => {
               href="https://www.reddit.com/r/elitemanga/"
               className="md-1 reddit"
               size="large"
-              style={{ color: "#ff4500" }}
+              style={{ color: "white", backgroundColor: "#ff4500" }}
               icon="reddit"
             />{" "}
           </div>

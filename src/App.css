@@ -44,13 +44,13 @@ input {
 }
 .navbar-collapse > .ui.fluid.icon > input,
 textarea.input-review,
-.input-review > textarea,
-input {
+.input-review > textarea {
   background-color: var(--input-color) !important;
   color: white;
 }
 #root > div > div > nav > div > div > form > div > input[type="text"] {
   color: white !important;
+  background-color: var(--input-color) !important;
 }
 .navbar-collapse > form,
 .MuiToolbar-root > form {
@@ -280,6 +280,7 @@ a.card:hover {
 .side-image .ui.image img,
 .fluid.image img {
   height: 190px !important;
+  width: 100%;
 }
 .card-columns {
   column-count: 2 !important;
@@ -941,7 +942,7 @@ div.ui.eight.cards > a.ui.card {
 .ui.checkbox > label,
 .point-form > label,
 form > div:nth-child(1) > label {
-  color: var(--color-solid-alt) !important;
+  color: var(--color-solid) !important;
 }
 
 td {
@@ -1136,4 +1137,28 @@ label[for="upload-photo"] {
 }
 .discord {
   background: #7289da;
+}
+.reddit {
+  background: #ff4500;
+}
+.ui.card .image,
+.ui.cards > .card .image {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.05);
+}
+<style > .ui.card > :first-child,
+.ui.cards > .card > :first-child {
+  border-radius: 0.28571429rem 0.28571429rem 0 0 !important;
+  border-top: none !important;
+}
+.MuiFormControl-root.MuiTextField-root.MuiFormControl-fullWidth > label {
+  color: var(--color-solid-alt);
+  z-index: 5000;
+}
+.kep-login-facebook.metro {
+  border-radius: 0;
+  font-size: 1em !important;
 }

@@ -95,14 +95,14 @@ const Review = (props) => {
           </Comment.Metadata> */}
             <Comment.Text>{props.content}</Comment.Text>
             <Comment.Metadata className="rev-meta-b">
-              {props.originality_score !== 0 && (
+              {props.moment_score !== 0 && (
                 <>
                   <Grid className="vanish">
                     <Grid.Row columns={4} divided>
                       <Grid.Column>
-                        Originality
+                        Moments
                         <br />
-                        {props.originality_score}/10
+                        {props.moment_score}/10
                       </Grid.Column>
                       <Grid.Column>
                         Plot

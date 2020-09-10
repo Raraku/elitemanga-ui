@@ -1,0 +1,48 @@
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .loader {
+    top: calc(50% - 11.17214285714285714285714rem);
+  }
+}
+
+.loader {
+  position: fixed;
+  height: 60px;
+  width: 60px;
+  border-radius: 80px;
+  border: 3px solid #eee;
+  // height: calc(100vh - 11.17214285714285714285714rem - 4.375rem)
+  top: 50%;
+  left: 50%;
+
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-animation: loader 3s linear infinite;
+  animation: loader 3s linear infinite;
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 20px;
+  width: 11px;
+  height: 11px;
+  border-radius: 10px;
+  background-color: teal;
+}

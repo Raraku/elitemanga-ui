@@ -72,7 +72,7 @@ class Login extends React.Component {
             />
           </Helmet>
           <Divider horizontal>
-            <h3>Login</h3>
+            <h3 className="need-theme">Login</h3>
           </Divider>
           <form className="signup-form" noValidate>
             <TextField
@@ -136,7 +136,7 @@ class Login extends React.Component {
               Login
             </Button>{" "}
           </form>
-          <div className="text-center mt-3">Or Login with</div>
+          <div className="text-center mt-3 chameleon">Or Login with</div>
           <div className="login-options">
             <GoogleBtn />
             <FacebookBtn />

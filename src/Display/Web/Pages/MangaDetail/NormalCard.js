@@ -72,6 +72,9 @@ function MangaIcon(props) {
           <Card.Meta className="text-muted one-line">{props.author}</Card.Meta>
         )}
       </Card.Content>
+      <Label attached="bottom right">
+        {props.media_type == 0 ? "Manga" : "Anime"}
+      </Label>
     </Card>
   );
 }

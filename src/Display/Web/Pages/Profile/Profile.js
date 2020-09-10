@@ -29,6 +29,8 @@ const Profile = (props) => {
   const [username, setUsername] = useState("");
   const [uploadPicture, shouldUpload] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [imageError, setImageError] = useState("");
+  const [error, setError] = useState("");
 
   const handleCloseSnack = () => {
     setSuccess(false);
@@ -42,9 +44,12 @@ const Profile = (props) => {
     setIsInput(false);
     var form_data = new FormData();
     if (event.target.files !== null) {
+      if (event.target.files[0].size > 2097152) {
+        setImageError("Please select a file less than 2mb.");
+        return;
+      }
       form_data.append(
         "avatar",
-
         event.target.files[0],
         event.target.files[0].name
       );
@@ -69,15 +74,15 @@ const Profile = (props) => {
         if (error.response) {
           // The request was made and the server responded with a status code
           // that falls out of the range of 2xx
-          console.log(error.response.data);
+          setError(error.response.data.username);
         } else if (error.request) {
           // The request was made but no response was received
           // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
           // http.ClientRequest in node.js
-          console.log(error.request.data);
+          setError(error.request.data);
         } else {
           // Something happened in setting up the request that triggered an Error
-          console.log("Error", error.message.data);
+          setError("Error", error.message.data);
         }
       });
   };
@@ -120,6 +125,7 @@ const Profile = (props) => {
               <TextField onChange={onChange} onBlur={onDrop} value={username} />
             )}
           </h1>
+          {error.length > 0 && <p className="text-danger">{error}</p>}
           <div className="image-div">
             <div className="my-user-avatar">
               <Avatar
@@ -138,6 +144,9 @@ const Profile = (props) => {
                 accept="image/*"
               />
             </div>
+            {imageError.length > 0 && (
+              <p className="text-danger">{imageError}</p>
+            )}
             <p className="change">{username}</p>
             <TextField
               id="outlined-basic"
@@ -156,7 +165,7 @@ const Profile = (props) => {
               message="Note archived"
             >
               <Alert onClose={handleClose} severity="success">
-                Your picture has been uploaded
+                Your profile has been updated.
               </Alert>
             </Snackbar>
           </div>
