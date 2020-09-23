@@ -37,12 +37,14 @@ export default class AccordionExampleStandard extends React.Component {
               onClick={this.handleClick}
             >
               <Icon name="dropdown" />
-              Moments
+              Entertainment Value
             </Accordion.Title>
             <Accordion.Content active={activeIndex === 0}>
               <p
                 className="accordion-p"
-                dangerouslySetInnerHTML={{ __html: elitemangareview.moment }}
+                dangerouslySetInnerHTML={{
+                  __html: elitemangareview.entertainment_value,
+                }}
               ></p>
             </Accordion.Content>
             <Accordion.Title
@@ -96,10 +98,10 @@ export default class AccordionExampleStandard extends React.Component {
             <Col xs={12} md={6}>
               <div className="mb-2 mt-5 d-flex review-div">
                 <div>
-                  <div className="font-review">Moments</div>
+                  <div className="font-review">Entertainment Value</div>
                   <div>
                     <Progress
-                      value={elitemangareview.moment_score}
+                      value={elitemangareview.entertainment_value_score}
                       total="10"
                       indicating
                       progress="ratio"

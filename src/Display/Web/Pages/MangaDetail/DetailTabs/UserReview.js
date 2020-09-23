@@ -124,7 +124,7 @@ class Comments extends React.Component {
       axiosConfig
         .post(`/mixed/${this.props.id}/add_review/`, {
           content: this.state.review,
-          originality_score: this.state.originality,
+          entertainment_value_score: this.state.originality,
           plot_score: this.state.plot,
           characters_score: this.state.characters,
           quality_score: this.state.quality,

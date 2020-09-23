@@ -50,6 +50,7 @@ import AddToHomeScreenIcon from "@material-ui/icons/AddToHomeScreen";
 import SystemUpdateAltIcon from "@material-ui/icons/SystemUpdateAlt";
 import work from "./tenor.gif";
 import Alert from "@material-ui/lab/Alert";
+import CookieConsent, { Cookies } from "react-cookie-consent";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -200,6 +201,21 @@ class Layout extends React.Component {
 
     return (
       <div>
+        {localStorage.getItem("consent") === null && (
+          <CookieConsent
+            location="bottom"
+            buttonText="I understand"
+            cookieName="consent"
+            cookieValue="true"
+            onAccept={() => {
+              localStorage.setItem("consent", true);
+            }}
+            acceptOnScroll="true"
+            expires={365}
+          >
+            This website uses cookies to enhance the user experience.
+          </CookieConsent>
+        )}
         <Navbar
           variant="light"
           expand="md"

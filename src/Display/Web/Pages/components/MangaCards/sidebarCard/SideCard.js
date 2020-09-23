@@ -10,7 +10,7 @@ function NormalCard(props) {
   const color = {
     Kami: "green",
     S: "yellow",
-    A: "teal",
+    A: "#2f273a",
     B: "brown",
   };
   return (

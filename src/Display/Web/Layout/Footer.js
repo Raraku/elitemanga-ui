@@ -5,11 +5,15 @@ import { ButtonGroup, Button, Icon } from "semantic-ui-react";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import RestoreIcon from "@material-ui/icons/Home";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
+import CasinoIcon from "@material-ui/icons/Casino";
+import AllInclusiveIcon from "@material-ui/icons/AllInclusive";
+import VpnKeyIcon from "@material-ui/icons/VpnKey";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+
 import { makeStyles } from "@material-ui/core/styles";
 import * as actions from "./../../../store/actions/auth";
 import { connect } from "react-redux";
+
 const useStyles = makeStyles({
   root: {
     width: "100%",
@@ -24,6 +28,7 @@ const FooterPage = (props) => {
     props.logout();
     props.history.push("/login/");
   };
+  console.log(props);
   return (
     <div className="nav-main">
       <Navbar
@@ -67,17 +72,24 @@ const FooterPage = (props) => {
           </div>
           <div className="footer-b">
             <div className="footer-c">Contact us</div>
-            <div className="footer-c">How our Reviews work</div>
-            <div className="footer-c">Privacy Policy</div>
-            <div className="footer-c">Terms of service</div>
+            <div className="footer-c">FAQ</div>
+            <div className="footer-c"></div>
+            <div className="footer-c"></div>
             <div className="footer-c last">Donate to us</div>
           </div>
         </div>
 
         <div className="text-center py-3">
           <Container className="footer-b" fluid>
-            <div className="mr-1 footer-c lom">Privacy Policy</div>
-            <div className="mr-1 footer-c lom">Terms of Service</div>
+            <Link to="/privacy-policy/" className="mr-1 footer-c lom">
+              Privacy Policy
+            </Link>
+            <Link to="/cookie-policy/" className="mr-1 footer-c lom">
+              Cookie Policy
+            </Link>
+            <Link to="/terms-of-use/" className="mr-1 footer-c lom">
+              Terms of Service
+            </Link>
             <div className="footer-c last">
               &copy; {new Date().getFullYear()} Copyright:{" "}
               <a id="foot" href="https://www.elitemanga.net">
@@ -129,7 +141,7 @@ const FooterPage = (props) => {
             label="Random Manga"
             selected={props.location.pathname === "/random/"}
             showLabel
-            icon={<FavoriteIcon />}
+            icon={<CasinoIcon />}
           />
         </Link>
 
@@ -138,7 +150,7 @@ const FooterPage = (props) => {
             label="Logout"
             showLabel
             onClick={logout}
-            icon={<LocationOnIcon />}
+            icon={<ExitToAppIcon />}
           />
         ) : (
           <Link
@@ -149,7 +161,7 @@ const FooterPage = (props) => {
               label="Login/Signup"
               showLabel
               selected={props.location.pathname === "/login/"}
-              icon={<LocationOnIcon />}
+              icon={<VpnKeyIcon />}
             />
           </Link>
         )}

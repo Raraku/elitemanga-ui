@@ -2,6 +2,9 @@ import React, { Suspense } from "react";
 import { Route, Switch } from "react-router-dom";
 import Loader from "./utils/Loader";
 import axiosConfig from "./../HOC/axiosConfig";
+import Terms from "./Layout/legal/tos";
+import Privacy from "./Layout/legal/privacypolicy";
+import Cookie from "./Layout/legal/cookie";
 const Home = React.lazy(() => import("./Pages/Home/Home"));
 const RandomManga = React.lazy(() => import("./Pages/RandomManga/RandomManga"));
 const Login = React.lazy(() => import("./Pages/Login/Login"));
@@ -54,6 +57,9 @@ const WebRouter = () => {
           render={(props) => <Display {...props} type={"1"} />}
         />
         <Route path="/random-manga/:manga/" component={Display} />
+        <Route path="/terms-of-use/" component={Terms} />
+        <Route path="/privacy-policy/" component={Privacy} />
+        <Route path="/cookie-policy/" component={Cookie} />
         <Route path="/contact-us/" component={ContactForm} />
         <Route path="/lists/:listSlug/" component={ListDetail} />
         <Route path="/lists/" component={Lists} />

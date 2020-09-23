@@ -1,9 +1,9 @@
 export const lightTheme = {
   "--color-solid": "black",
-  "--color-surface": "white",
-  "--theme-color": "teal",
-  "--header-color": "teal",
-  "--background": "white",
+  "--color-surface": "#ccc",
+  "--theme-color": "#2f273a",
+  "--header-color": "#2f273a",
+  "--background": "#888",
   "--color-solid-alt": "rgba(0,0,0,.87)",
   "--new-box": "none",
   "--tab-background": "0 1px 2px 0 rgba(34,36,38,.15)",
@@ -13,7 +13,7 @@ export const lightTheme = {
   "--nav-mobile-color": "rgba(0, 0, 0, 0.54)",
   "--color-solid-alt-dropdown": "rgba(0, 0, 0, 0.54)",
   "--placeholder": "#fff",
-  "--left-rand-color": "teal",
+  "--left-rand-color": "#2f273a",
   "--transparent": "#fff",
 };
 export const darkTheme = {

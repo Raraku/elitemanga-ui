@@ -7,20 +7,24 @@
   --color-alt-light: rgba(0, 0, 0, 0.4);
   --tab-background: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
 }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
+
 /* //Themeing */
-.ui.card > .content > .header,
-.ui.cards > .card > .content > .header {
+.ui.card>.content>.header,
+.ui.cards>.card>.content>.header {
   color: var(--color-solid);
 }
+
 html,
 body {
   height: 100% !important;
 }
+
 .ui.cards a.card:hover,
 .ui.link.card:hover,
 .ui.link.cards .card:hover,
@@ -32,31 +36,35 @@ a.ui.card:hover {
   box-shadow: 0 1px 3px 0 #bcbdbd, 0 0 0 1px #d4d4d5;
   transform: translateY(-3px);
 }
-.ui.items > .item > .content > a.header,
+
+.ui.items>.item>.content>a.header,
 .list-time,
 .list-excerpt,
 .list-item-title,
 .list-body,
 .font-review,
-.statistic > .label,
+.statistic>.label,
 .list-forgotten,
 .chameleon {
   color: var(--color-solid) !important;
 }
+
 .accordion.ui.fluid.styled,
-.accordion.ui.fluid.styled > div.title {
+.accordion.ui.fluid.styled>div.title {
   color: var(--color-solid-alt-dropdown);
 }
+
 .accordion.ui.fluid.styled:hover,
-.accordion.ui.fluid.styled > div.title:hover {
+.accordion.ui.fluid.styled>div.title:hover {
   color: var(--color-solid);
 }
 
 .ui.card,
-.ui.cards > .card {
+.ui.cards>.card {
   background: var(--color-surface);
   color: var(--color-solid);
 }
+
 body {
   background-color: var(--background);
   /* background-image: url("back.svg");
@@ -69,10 +77,12 @@ body {
   font-weight: 500;
   font-size: 12px !important;
 }
+
 .ui.segment {
   border: none !important;
   background-color: var(--color-surface);
 }
+
 .card {
   background-color: var(--color-surface);
 }
@@ -84,26 +94,31 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+
 .definition,
 .accordion.ui.fluid.styled {
   background-color: var(--color-surface) !important;
 }
+
 /* .definition,*/
 .ui.fluid.pointing.vertical.menu,
 /* .accordion.ui.fluid.styled, */
 .MuiPaper-root,
-.ui.attached.segment > .ui.segment,
+.ui.attached.segment>.ui.segment,
 .list-segment {
   background-color: var(--color-surface) !important;
   box-shadow: var(--tab-background) !important;
 }
+
 .MuiPaper-root {
   padding-left: 1.3em !important;
   padding-right: 1.3em !important;
 }
+
 a.ui.card {
   box-shadow: none !important;
 }
+
 .footer-nav {
   box-shadow: var(--footer);
 }

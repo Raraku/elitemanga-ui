@@ -26,7 +26,6 @@ const Review = (props) => {
   const [disliked, setDislike] = useState(false);
   const [likey, setLikey] = useState(props.likes);
   const [dislikey, setDislikey] = useState(props.dislikes);
-  console.log(props.originality_score);
 
   const getReplies = () => {
     axios.get(`/review-comment/${props.id}/`).then((res) => {
@@ -95,14 +94,14 @@ const Review = (props) => {
           </Comment.Metadata> */}
             <Comment.Text>{props.content}</Comment.Text>
             <Comment.Metadata className="rev-meta-b">
-              {props.moment_score !== 0 && (
+              {props.entertainment_value_score !== 0 && (
                 <>
                   <Grid className="vanish">
                     <Grid.Row columns={4} divided>
                       <Grid.Column>
-                        Moments
+                        Entertainment Value
                         <br />
-                        {props.moment_score}/10
+                        {props.entertainment_value_score}/10
                       </Grid.Column>
                       <Grid.Column>
                         Plot
@@ -123,11 +122,13 @@ const Review = (props) => {
                   </Grid>
                   <Row className="user-review-star mobile">
                     <Col className="star-item" xs={6} md={3}>
-                      <Typography component="legend">Originality</Typography>
+                      <Typography component="legend">
+                        Entertainment Value
+                      </Typography>
                       <Rating
                         readOnly
                         name="customized-empty"
-                        value={props.originality_score / 2}
+                        value={props.entertainment_value_score / 2}
                         precision={0.5}
                         emptyIcon={<StarBorderIcon fontSize="inherit" />}
                       />
