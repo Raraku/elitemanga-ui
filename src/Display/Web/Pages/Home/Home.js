@@ -63,6 +63,18 @@ class Home extends React.Component {
             <Segment className="p-0">
               <LatestAnime type="1" />
               <LatestManga type="0" />
+              <div className="d-flex justify-content-center ml-auto">
+                <iframe
+                  src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=amazonhomepage&f=ifr&linkID=7112377050b0f1143dafb671e5cfbb33&t=avowed-20&tracking_id=avowed-20"
+                  width="720"
+                  height="90"
+                  scrolling="no"
+                  border="0"
+                  marginwidth="0"
+                  style={{ border: "none", alignSelf: "center" }}
+                  frameborder="0"
+                ></iframe>
+              </div>
               <Heroes />
             </Segment>
           </Col>

@@ -53,7 +53,7 @@ const Info = (props) => {
     },
   ];
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <Tab
         className="tab-marg switch0"
         id="tab-marg"
@@ -61,6 +61,7 @@ const Info = (props) => {
         menuPosition="left"
         panes={panes}
       />
+
       <Tab
         className="tab-marg switch1"
         id="tab-marg"
