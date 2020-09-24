@@ -23,6 +23,17 @@ class Home extends React.Component {
       state: "",
     };
   }
+  componentDidMount = () => {
+    const script1 = document.createElement("script");
+    script1.async = true;
+    script1.src =
+      "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c992433-ae2e-4012-aca6-9a3de15989eb";
+    this.div1.appendChild(script1);
+    const script = document.createElement("script");
+    script.src =
+      "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=992750b0-5372-494d-b53a-6014b5497e41";
+    this.div.insertAdjacentElement("afterend", script);
+  };
   render() {
     return (
       <div>
@@ -63,19 +74,21 @@ class Home extends React.Component {
             <Segment className="p-0">
               <LatestAnime type="1" />
               <LatestManga type="0" />
-              <div className="d-flex justify-content-center ml-auto">
-                <iframe
-                  src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=amazonhomepage&f=ifr&linkID=7112377050b0f1143dafb671e5cfbb33&t=avowed-20&tracking_id=avowed-20"
-                  width="720"
-                  height="90"
-                  scrolling="no"
-                  border="0"
-                  marginwidth="0"
-                  style={{ border: "none", alignSelf: "center" }}
-                  frameborder="0"
-                ></iframe>
+              <div className="d-flex am-ad justify-content-center ml-auto">
+                <div
+                  ref={(el) => (this.div = el)}
+                  id="amzn-assoc-ad-992750b0-5372-494d-b53a-6014b5497e41"
+                ></div>
               </div>
               <Heroes />
+              <div
+                ref={(el) => (this.div1 = el)}
+                id="amzn-assoc-ad-8c992433-ae2e-4012-aca6-9a3de15989eb"
+              ></div>
+              <script
+                async
+                src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c992433-ae2e-4012-aca6-9a3de15989eb"
+              ></script>
             </Segment>
           </Col>
           <Col

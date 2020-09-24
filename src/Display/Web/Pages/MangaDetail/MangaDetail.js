@@ -21,6 +21,13 @@ class MangaDetail extends React.Component {
       manga: [],
     };
   }
+  componentDidMount() {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src =
+      "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c992433-ae2e-4012-aca6-9a3de15989eb";
+    this.div.appendChild(script);
+  }
 
   componentDidUpdate(prevProps) {
     if (prevProps.manga.id != this.props.manga.id) {
@@ -72,29 +79,15 @@ class MangaDetail extends React.Component {
             manga={this.props.match.params.manga}
             id={this.props.manga.id}
           />
-          <div className="d-flex justify-content-center ml-auto mt-3">
-            <iframe
-              src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=amazonhomepage&f=ifr&linkID=7112377050b0f1143dafb671e5cfbb33&t=avowed-20&tracking_id=avowed-20"
-              width="720"
-              height="90"
-              className="vanish"
-              scrolling="no"
-              border="0"
-              marginwidth="0"
-              style={{ border: "none", alignSelf: "center" }}
-              frameborder="0"
-            ></iframe>
-            <iframe
-              src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=288&l=ur1&category=amazonhomepage&f=ifr&linkID=e18a90342955862047c8b9d46ee91a2d&t=avowed-20&tracking_id=avowed-20"
-              width="320"
-              height="50"
-              scrolling="no"
-              border="0"
-              marginwidth="0"
-              style={{ border: "none" }}
-              frameborder="0"
-            ></iframe>
-          </div>
+
+          <div
+            ref={(el) => (this.div = el)}
+            id="amzn-assoc-ad-8c992433-ae2e-4012-aca6-9a3de15989eb"
+          ></div>
+          <script
+            async
+            src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c992433-ae2e-4012-aca6-9a3de15989eb"
+          ></script>
         </div>
       </div>
     );
