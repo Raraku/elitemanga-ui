@@ -5,10 +5,10 @@
 :root {
   /* --theme-color: #01258a71; */
   /* --theme-color: rgba(119, 145, 218, 0.6); */
-  --theme-color: teal;
+  --theme-color: #242582;
   --color-surface: #fff;
   --color-solid: #000;
-  --header-color: rgba(178, 34, 34, 0);
+  --header-color: #242582;
   --input-color: inherit;
   --background: white;
   --new-box: none;
@@ -21,7 +21,7 @@
   --color-dropdown-mini-text: teal;
   --color-solid-alt-dropdown: rgba(0, 0, 0, 0.54);
   --transparent: #fff;
-  --left-rand-color: teal;
+  --left-rand-color: #242582;
 }
 
 .e-button {
