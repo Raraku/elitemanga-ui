@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet";
 import { Col, Card } from "react-bootstrap";
 import Sidebar from "./Left";
 import { Row } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
 
 import HotAnime from "./HotAnime";
 import { Segment } from "semantic-ui-react";
@@ -24,11 +25,11 @@ class Home extends React.Component {
     };
   }
   componentDidMount = () => {
-    const script1 = document.createElement("script");
-    script1.async = true;
-    script1.src =
-      "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c992433-ae2e-4012-aca6-9a3de15989eb";
-    this.div1.appendChild(script1);
+    // const script1 = document.createElement("script");
+    // script1.async = true;
+    // script1.src =
+    //   "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c992433-ae2e-4012-aca6-9a3de15989eb";
+    // this.div1.appendChild(script1);
     const script = document.createElement("script");
     script.src =
       "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=992750b0-5372-494d-b53a-6014b5497e41";
@@ -36,7 +37,7 @@ class Home extends React.Component {
   };
   render() {
     return (
-      <div>
+      <Container className="dont-pad">
         <Helmet>
           <title>
             EliteManga - Find and read the best Manga and Anime online
@@ -48,65 +49,49 @@ class Home extends React.Component {
           />
         </Helmet>
 
-        <Row noGutters>
-          <Col xs={12} md={9}>
-            <Segment className="p-0 colorless">
-              <HotManga />
+        <Segment className="p-0 colorless">
+          <HotManga />
 
-              <HotAnime />
-            </Segment>
-          </Col>
-          <Col xs={12} md={3}>
-            <Segment className="p-0 colorless">
-              <Lists />
-            </Segment>
-          </Col>
-        </Row>
+          <HotAnime />
+        </Segment>
 
-        <Hero />
-
-        <Row noGutters>
-          <Col
-            className="pr-1"
-            xs={{ order: 1, span: 12 }}
-            md={{ order: 1, span: 9 }}
-          >
-            <Segment className="p-0">
-              <LatestAnime type="1" />
-              <LatestManga type="0" />
-              <div className="d-flex am-ad justify-content-center ml-auto">
-                <div
-                  ref={(el) => (this.div = el)}
-                  id="amzn-assoc-ad-992750b0-5372-494d-b53a-6014b5497e41"
-                ></div>
-              </div>
-              <Heroes />
-              <div
-                ref={(el) => (this.div1 = el)}
-                id="amzn-assoc-ad-8c992433-ae2e-4012-aca6-9a3de15989eb"
-              ></div>
-              <script
-                async
-                src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c992433-ae2e-4012-aca6-9a3de15989eb"
-              ></script>
-            </Segment>
-          </Col>
-          <Col
-            className="pl-0"
-            xs={{ order: 1, span: 12 }}
-            md={{ order: 2, span: 3 }}
-          >
-            <Segment className="p-0">
-              <Unreleased />
-              {/*Top Manga of all Time*/}
-              <Sidebar type="0" />
-              {/*Top Anime of all Time*/}
-              <Sidebar type="1" />
-            </Segment>
-          </Col>
-        </Row>
-      </div>
+        <Segment className="p-0">
+          <LatestManga type="0" />
+          <div className="d-flex am-ad justify-content-center ml-auto"></div>
+          <Heroes />
+          <div
+            ref={(el) => (this.div = el)}
+            id="amzn-assoc-ad-992750b0-5372-494d-b53a-6014b5497e41"
+          ></div>
+        </Segment>
+      </Container>
     );
   }
 }
 export default Home;
+
+//  <Col className="pl-0" xs={{ order: 1, span: 12 }} md={{ order: 2, span: 3 }}>
+//    <Segment className="p-0">
+//      <Unreleased />
+//      {/*Top Manga of all Time*/}
+//      <Sidebar type="0" />
+//      {/*Top Anime of all Time*/}
+//      <Sidebar type="1" />
+//    </Segment>
+//  </Col>;
+
+// <Segment className="p-0 colorless">
+//   <Lists />
+// </Segment>;
+
+// <Row noGutters>
+//   <Col
+//     className="pr-1"
+//     xs={{ order: 1, span: 12 }}
+//     md={{ order: 1, span: 9 }}
+//   ></Col>
+
+//  </Col>
+// </Row>
+
+//  <LatestAnime type="1" />;

@@ -99,9 +99,7 @@ const ListDetail = (props) => {
                       </div>
                     ) : (
                       <div style={{ height: "200px" }}>
-                        <Loader active size="big">
-                          Loading...
-                        </Loader>
+                        <Loader active size="big"></Loader>
                       </div>
                     )}
                   </Card.Body>
@@ -113,9 +111,7 @@ const ListDetail = (props) => {
       ) : (
         <Segment>
           <div style={{ height: "200px" }}>
-            <Loader active size="big">
-              Loading...
-            </Loader>
+            <Loader active size="big"></Loader>
           </div>
         </Segment>
       )}

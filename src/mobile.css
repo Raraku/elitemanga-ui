@@ -9,6 +9,10 @@ button:focus {
   .mobile {
     display: none !important;
   }
+
+  .similar-wrap {
+    overflow-y: visible;
+  }
   .a2-card-image {
     max-height: 25vw !important;
   }
@@ -22,6 +26,10 @@ button:focus {
 @media only screen and (max-width: 768px) {
   .vanish {
     display: none !important;
+  }
+  .container,
+  .container-sm {
+    max-width: none !important;
   }
   #my-cont > .ui.segment {
     min-height: calc(100vh - 4.375rem);

@@ -25,7 +25,8 @@ import { Divider, Input, Segment, Dropdown } from "semantic-ui-react";
 import { connect } from "react-redux";
 import * as actions from "./../../../store/actions/auth";
 import TextField from "@material-ui/core/TextField";
-import logo from "./../../../elitemanga-logo.png";
+import logo from "./../../../LogoWhite.png";
+import logo2 from "./../../../LogoBlack.png";
 import FooterPage from "./Footer";
 import Avatar from "@material-ui/core/Avatar";
 import axiosConfig from "./../../HOC/axiosConfig";
@@ -216,20 +217,20 @@ class Layout extends React.Component {
             This website uses cookies to enhance the user experience.
           </CookieConsent>
         )}
-        <Navbar
-          variant="light"
-          expand="md"
-          style={{ color: "white" }}
-          className="mynav vanish navbar-top-first"
-        >
-          <Container>
+        <Container>
+          <Navbar
+            variant="light"
+            expand="md"
+            style={{ color: "white" }}
+            className="mynav vanish navbar-top-first"
+          >
             <Navbar.Brand
               style={{ paddingTop: "0", paddingBottom: "0" }}
               as={Link}
               to="/"
             >
               <img
-                style={{ width: "3.5em", height: "3.5em" }}
+                style={{ width: "2em", height: "2em" }}
                 src={logo}
                 alt="eliteManga"
               />
@@ -350,8 +351,8 @@ class Layout extends React.Component {
                 )}
               </div>
             </Navbar.Collapse>
-          </Container>
-        </Navbar>
+          </Navbar>
+        </Container>
         <Dialog
           TransitionComponent={Transition}
           className="pre-open-dialog"
@@ -395,7 +396,11 @@ class Layout extends React.Component {
             <Toolbar>
               <Link to="">
                 <Typography className="appbar-title" variant="h5">
-                  Elitemanga
+                  <img
+                    style={{ width: "1.5em", height: "1.5em" }}
+                    src={logo2}
+                    alt="eliteManga"
+                  />
                 </Typography>
               </Link>
               {this.state.showInput && (
@@ -461,12 +466,12 @@ class Layout extends React.Component {
             </Toolbar>
           </AppBar>
         </div>
-        <Container id="cont-1" fluid>
+        <Container id="cont-1">
           {/* <Col className="coll-hidden" xs={1}>
             <Sidebar />
           </Col> */}
 
-          <Container fluid id="my-cont">
+          <Container id="my-cont">
             <Dialog
               fullScreen
               className="mobile"

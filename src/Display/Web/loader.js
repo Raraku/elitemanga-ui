@@ -5,9 +5,7 @@ import { Loader, Dimmer } from "semantic-ui-react";
 function LoadModal(props) {
   return (
     <Modal show={props.show} centered className="load-modal">
-      <Loader active size="massive">
-        Loading...
-      </Loader>
+      <Loader active size="massive"></Loader>
       <Button onClick={props.changeLoading}>show</Button>
     </Modal>
   );

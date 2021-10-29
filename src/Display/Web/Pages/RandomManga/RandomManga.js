@@ -21,6 +21,14 @@ const RandomManga = (props) => {
   const handleChange = (event) => {
     setValue(event.target.value);
   };
+  var div1 = React.useRef();
+  useEffect(() => {
+    const script1 = document.createElement("script");
+    script1.async = true;
+    script1.src =
+      "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c992433-ae2e-4012-aca6-9a3de15989eb";
+    div1.appendChild(script1);
+  }, []);
   console.log(value);
   const chooseManga = (data) => {
     // const qualifiedManga = manga.filter((item) => {
@@ -147,6 +155,10 @@ const RandomManga = (props) => {
           </div>
         </Col>
       </Row>
+      <div
+        ref={(el) => (div1 = el)}
+        id="amzn-assoc-ad-8c992433-ae2e-4012-aca6-9a3de15989eb"
+      ></div>
     </div>
   );
 };

@@ -54,10 +54,10 @@ class SimilarManga extends React.Component {
           </div>
           {!this.state.loading ? (
             <div>
-              <Row className="flex-row wrapper flex-nowrap similar-wrap">
+              <Row className="flex-row wrapper mb-4 swrap flex-nowrap similar-wrap">
                 <div>
-                  <CardGroup className="excluded" itemsPerRow={8}>
-                    {this.state.manga.slice(0, 8).map((manga) => (
+                  <CardGroup className="excluded" itemsPerRow={6}>
+                    {this.state.manga.slice(0, 6).map((manga) => (
                       <NormalCard
                         title={manga.title}
                         key={manga.id}
@@ -78,9 +78,7 @@ class SimilarManga extends React.Component {
           ) : (
             <Segment>
               <div style={{ height: "200px" }}>
-                <Loader active size="big">
-                  Loading...
-                </Loader>
+                <Loader active size="big"></Loader>
               </div>
             </Segment>
           )}

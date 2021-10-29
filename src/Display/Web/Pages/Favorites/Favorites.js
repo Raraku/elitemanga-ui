@@ -40,9 +40,7 @@ class Favorites extends React.Component {
             ) : (
               <Segment>
                 <div style={{ height: "200px" }}>
-                  <Loader active size="big">
-                    Loading...
-                  </Loader>
+                  <Loader active size="big"></Loader>
                 </div>
               </Segment>
             )}
