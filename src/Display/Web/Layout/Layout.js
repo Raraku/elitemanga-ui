@@ -244,8 +244,8 @@ class Layout extends React.Component {
                 <Nav.Link as={Link} to="/random/">
                   Random Manga
                 </Nav.Link>
-                <Nav.Link as={Link} to="/user-reviews/">
-                  User Reviews
+                <Nav.Link as={Link} to="/random-anime/">
+                  Recommend Anime
                 </Nav.Link>
               </Nav>
               {/* <InputGroup>

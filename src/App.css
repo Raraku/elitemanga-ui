@@ -289,14 +289,14 @@ i.search.icon {
   margin-right: auto;
 }
 
-.ui.fluid.image,
+/* .ui.fluid.image,
 .ui.fluid.image img,
 .ui.fluid.image svg,
 .ui.fluid.images,
 .ui.fluid.images img,
 .ui.fluid.images svg {
   height: 100% !important;
-}
+} */
 
 div.text-center > .ui.fluid.image img {
   width: 80%;
@@ -328,11 +328,7 @@ a.card:hover {
   box-shadow: 0 1px 2px #ccc;
 }
 
-.side-image .ui.image img,
-.fluid.image img {
-  height: 190px !important;
-  width: 100%;
-}
+/* .side-image .ui.image img, */
 
 .card-columns {
   column-count: 2 !important;

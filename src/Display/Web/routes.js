@@ -51,6 +51,7 @@ const WebRouter = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/random/" component={RandomManga} />
+        <Route exact path="/random-anime/" component={RandomManga} />
         <Route
           exact
           path="/random-anime/:manga/"

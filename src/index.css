@@ -15,8 +15,8 @@ body {
 }
 
 /* //Themeing */
-.ui.card>.content>.header,
-.ui.cards>.card>.content>.header {
+.ui.card > .content > .header,
+.ui.cards > .card > .content > .header {
   color: var(--color-solid);
 }
 
@@ -35,32 +35,36 @@ a.ui.card:hover {
   border: none;
   box-shadow: 0 1px 3px 0 #bcbdbd, 0 0 0 1px #d4d4d5;
   transform: translateY(-3px);
+  border-bottom: 2px solid black;
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  z-index: 30000;
 }
 
-.ui.items>.item>.content>a.header,
+.ui.items > .item > .content > a.header,
 .list-time,
 .list-excerpt,
 .list-item-title,
 .list-body,
 .font-review,
-.statistic>.label,
+.statistic > .label,
 .list-forgotten,
 .chameleon {
   color: var(--color-solid) !important;
 }
 
 .accordion.ui.fluid.styled,
-.accordion.ui.fluid.styled>div.title {
+.accordion.ui.fluid.styled > div.title {
   color: var(--color-solid-alt-dropdown);
 }
 
 .accordion.ui.fluid.styled:hover,
-.accordion.ui.fluid.styled>div.title:hover {
+.accordion.ui.fluid.styled > div.title:hover {
   color: var(--color-solid);
 }
 
 .ui.card,
-.ui.cards>.card {
+.ui.cards > .card {
   background: var(--color-surface);
   color: var(--color-solid);
 }

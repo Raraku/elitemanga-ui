@@ -9,6 +9,13 @@ button:focus {
   .mobile {
     display: none !important;
   }
+  .fluid.image img {
+    height: 24em;
+  }
+  .theaim img {
+    width: auto !important;
+    height: 30vh !important;
+  }
 
   .similar-wrap {
     overflow-y: visible;
@@ -22,10 +29,17 @@ button:focus {
     margin-right: 0.5em;
     font-size: 1em;
   }
+  .dont-pad {
+    overflow-x: hidden;
+  }
 }
 @media only screen and (max-width: 768px) {
   .vanish {
     display: none !important;
+  }
+  .fluid.image img {
+    height: 190px !important;
+    width: 100%;
   }
   .container,
   .container-sm {

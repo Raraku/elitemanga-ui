@@ -25,6 +25,7 @@ function MangaIcon(props) {
           <div className="a2-card-image" style={{ height: "100%" }}>
             <Image
               fluid
+              className="theaim"
               label={{
                 as: "a",
                 color: color[props.rank],

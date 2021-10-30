@@ -11,10 +11,12 @@ import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
+import MobileStoreButton from "react-mobile-store-button";
 
 const RandomManga = (props) => {
   const [status, setStatus] = useState(0);
-
+  const remakeUUrl =
+    "https://play.google.com/store/apps/details?id=com.eria.remakeU&hl=en&gl=US";
   const [chosenManga, setChosenManga] = useState(null);
   const [error, setError] = useState(false);
   const [value, setValue] = useState("0");
@@ -112,9 +114,7 @@ const RandomManga = (props) => {
       {status === 1 && (
         <Segment>
           <div style={{ height: "200px" }}>
-            <Loader active size="big">
-              Searching the archives...
-            </Loader>
+            <Loader active size="big"></Loader>
           </div>
         </Segment>
       )}
@@ -152,6 +152,29 @@ const RandomManga = (props) => {
             <Button className="text-center rand-bt mu-3" onClick={getManga}>
               <h3>Get Recommendation</h3>
             </Button>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "1em",
+                textAlign: "center",
+                fontWeight: "bold",
+              }}
+            >
+              <p>
+                Develop better habits. Download the RemakeU app from the Google
+                Play Store
+              </p>
+              <a href="https://play.google.com/store/apps/details?id=com.eria.remakeU&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+                <img
+                  style={{ height: "6em" }}
+                  alt="Get it on Google Play"
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                />
+              </a>
+            </div>
           </div>
         </Col>
       </Row>
