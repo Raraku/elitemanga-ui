@@ -5,6 +5,7 @@ import axiosConfig from "./../HOC/axiosConfig";
 import Terms from "./Layout/legal/tos";
 import Privacy from "./Layout/legal/privacypolicy";
 import Cookie from "./Layout/legal/cookie";
+import RandomAnime from "./Pages/RandomManga/RandomAnime";
 const Home = React.lazy(() => import("./Pages/Home/Home"));
 const RandomManga = React.lazy(() => import("./Pages/RandomManga/RandomManga"));
 const Login = React.lazy(() => import("./Pages/Login/Login"));
@@ -51,7 +52,7 @@ const WebRouter = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/random/" component={RandomManga} />
-        <Route exact path="/random-anime/" component={RandomManga} />
+        <Route exact path="/random-anime/" component={RandomAnime} />
         <Route
           exact
           path="/random-anime/:manga/"
