@@ -24,17 +24,17 @@ class Home extends React.Component {
       state: "",
     };
   }
-  componentDidMount = () => {
-    // const script1 = document.createElement("script");
-    // script1.async = true;
-    // script1.src =
-    //   "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c992433-ae2e-4012-aca6-9a3de15989eb";
-    // this.div1.appendChild(script1);
-    const script = document.createElement("script");
-    script.src =
-      "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=992750b0-5372-494d-b53a-6014b5497e41";
-    this.div.insertAdjacentElement("afterend", script);
-  };
+  // componentDidMount = () => {
+  // const script1 = document.createElement("script");
+  // script1.async = true;
+  // script1.src =
+  //   "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c992433-ae2e-4012-aca6-9a3de15989eb";
+  // this.div1.appendChild(script1);
+  //   const script = document.createElement("script");
+  //   script.src =
+  //     "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=992750b0-5372-494d-b53a-6014b5497e41";
+  //   this.div.insertAdjacentElement("afterend", script);
+  // };
   render() {
     return (
       <Container className="dont-pad">
@@ -59,10 +59,6 @@ class Home extends React.Component {
           <LatestManga type="0" />
           <div className="d-flex am-ad justify-content-center ml-auto"></div>
           <Heroes />
-          <div
-            ref={(el) => (this.div = el)}
-            id="amzn-assoc-ad-992750b0-5372-494d-b53a-6014b5497e41"
-          ></div>
         </Segment>
       </Container>
     );
@@ -95,3 +91,8 @@ export default Home;
 // </Row>
 
 //  <LatestAnime type="1" />;
+
+// <div
+//   ref={(el) => (this.div = el)}
+//   id="amzn-assoc-ad-992750b0-5372-494d-b53a-6014b5497e41"
+// ></div>;

@@ -21,13 +21,13 @@ class MangaDetail extends React.Component {
       manga: [],
     };
   }
-  componentDidMount() {
-    const script = document.createElement("script");
-    script.async = true;
-    script.src =
-      "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c992433-ae2e-4012-aca6-9a3de15989eb";
-    this.div.appendChild(script);
-  }
+  // componentDidMount() {
+  //   const script = document.createElement("script");
+  //   script.async = true;
+  //   script.src =
+  //     "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c992433-ae2e-4012-aca6-9a3de15989eb";
+  //   this.div.appendChild(script);
+  // }
 
   componentDidUpdate(prevProps) {
     if (prevProps.manga.id != this.props.manga.id) {
@@ -79,15 +79,6 @@ class MangaDetail extends React.Component {
             manga={this.props.match.params.manga}
             id={this.props.manga.id}
           />
-
-          <div
-            ref={(el) => (this.div = el)}
-            id="amzn-assoc-ad-8c992433-ae2e-4012-aca6-9a3de15989eb"
-          ></div>
-          <script
-            async
-            src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c992433-ae2e-4012-aca6-9a3de15989eb"
-          ></script>
         </div>
       </div>
     );
@@ -99,3 +90,12 @@ const mapStateToProps = (state) => {
   };
 };
 export default compose(connect(mapStateToProps), GetManga)(MangaDetail);
+
+// <div
+//           ref={(el) => (this.div = el)}
+//           id="amzn-assoc-ad-8c992433-ae2e-4012-aca6-9a3de15989eb"
+//         ></div>
+//         <script
+//           async
+//           src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c992433-ae2e-4012-aca6-9a3de15989eb"
+//         ></script>

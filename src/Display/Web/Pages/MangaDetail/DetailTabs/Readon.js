@@ -19,15 +19,16 @@ const Readon = (props) => {
         color = "aqua";
         break;
       default:
-        color = "blue";
+        color = "#263238";
     }
     return (
       <Button
         href={source.link}
+        className="mt-3 mb-3"
         style={{ backgroundColor: color, color: "white" }}
         fluid
       >
-        {source.image && <img className="source-image" src={source.image} />}{" "}
+        {false && <img className="source-image" src={source.image} />}{" "}
         {source.name}
       </Button>
     );
@@ -51,15 +52,19 @@ const Readon = (props) => {
       <Grid.Column className="text-center">
         Unofficial Source(s)
         <br />
-        {props.sources
-          .filter(function (friend) {
-            return friend.official == false;
-          })
-          .map((item) => (
-            <div>{ButtonToDisplay(item)}</div>
-          ))}
+        <p className="mt-3 " style={{ fontSize: "1.2em" }}>
+          Support the authors! They put a lot of work into their works. 😄
+        </p>
       </Grid.Column>
     </Grid>
   );
 };
 export default Readon;
+
+//  {
+//    props.sources
+//      .filter(function (friend) {
+//        return friend.official == false;
+//      })
+//      .map((item) => <div>{ButtonToDisplay(item)}</div>);
+//  }

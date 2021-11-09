@@ -23,14 +23,14 @@ const RandomManga = (props) => {
   const handleChange = (event) => {
     setValue(event.target.value);
   };
-  var div1 = React.useRef();
-  useEffect(() => {
-    const script1 = document.createElement("script");
-    script1.async = true;
-    script1.src =
-      "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c992433-ae2e-4012-aca6-9a3de15989eb";
-    div1.appendChild(script1);
-  }, []);
+  // var div1 = React.useRef();
+  // useEffect(() => {
+  //   const script1 = document.createElement("script");
+  //   script1.async = true;
+  //   script1.src =
+  //     "//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8c992433-ae2e-4012-aca6-9a3de15989eb";
+  //   div1.appendChild(script1);
+  // }, []);
   console.log(value);
   const chooseManga = (data) => {
     // const qualifiedManga = manga.filter((item) => {
@@ -164,8 +164,9 @@ const RandomManga = (props) => {
               }}
             >
               <p>
-                Develop better habits. Download the RemakeU app from the Google
-                Play Store
+                The Elitemanga team also has a mobile app to help you develop
+                better habits. Download the RemakeU app from the Google Play
+                Store
               </p>
               <a href="https://play.google.com/store/apps/details?id=com.eria.remakeU&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
                 <img
@@ -178,10 +179,6 @@ const RandomManga = (props) => {
           </div>
         </Col>
       </Row>
-      <div
-        ref={(el) => (div1 = el)}
-        id="amzn-assoc-ad-8c992433-ae2e-4012-aca6-9a3de15989eb"
-      ></div>
     </div>
   );
 };
@@ -192,3 +189,8 @@ const mapStateToProps = (state) => {
   };
 };
 export default connect(mapStateToProps)(RandomManga);
+
+//  <div
+//    ref={(el) => (div1 = el)}
+//    id="amzn-assoc-ad-8c992433-ae2e-4012-aca6-9a3de15989eb"
+//  ></div>;
