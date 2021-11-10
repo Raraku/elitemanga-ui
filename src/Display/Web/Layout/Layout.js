@@ -52,6 +52,7 @@ import SystemUpdateAltIcon from "@material-ui/icons/SystemUpdateAlt";
 import work from "./tenor.gif";
 import Alert from "@material-ui/lab/Alert";
 import CookieConsent, { Cookies } from "react-cookie-consent";
+import GoogleAds from "../../HOC/GoogleAds";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -468,20 +469,7 @@ class Layout extends React.Component {
         </div>
         <Row>
           <Col className="vanish" xs={2}>
-            <script
-              async
-              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5543476548341387"
-              crossorigin="anonymous"
-            ></script>
-            <ins
-              class="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-client="ca-pub-5543476548341387"
-              data-ad-slot="6622607966"
-              data-ad-format="auto"
-              data-full-width-responsive="true"
-            ></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <GoogleAds slot="6622607966" />
           </Col>
           <Col>
             <Container id="cont-1">
@@ -551,21 +539,7 @@ class Layout extends React.Component {
             </Container>
           </Col>
           <Col className="vanish" xs={2}>
-            <script
-              async
-              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5543476548341387"
-              crossorigin="anonymous"
-            ></script>
-
-            <ins
-              class="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-client="ca-pub-5543476548341387"
-              data-ad-slot="6622607966"
-              data-ad-format="auto"
-              data-full-width-responsive="true"
-            ></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <GoogleAds slot="6622607966" />
           </Col>
         </Row>
       </div>
