@@ -466,71 +466,108 @@ class Layout extends React.Component {
             </Toolbar>
           </AppBar>
         </div>
-        <Container id="cont-1">
-          {/* <Col className="coll-hidden" xs={1}>
+        <Row>
+          <Col className="vanish" xs={2}>
+            <script
+              async
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5543476548341387"
+              crossorigin="anonymous"
+            ></script>
+            <ins
+              class="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-client="ca-pub-5543476548341387"
+              data-ad-slot="6622607966"
+              data-ad-format="auto"
+              data-full-width-responsive="true"
+            ></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          </Col>
+          <Col>
+            <Container id="cont-1">
+              {/* <Col className="coll-hidden" xs={1}>
             <Sidebar />
           </Col> */}
 
-          <Container id="my-cont">
-            <Dialog
-              fullScreen
-              className="mobile"
-              open={this.state.open}
-              TransitionComponent={Transition}
-            >
-              <List>
-                {this.state.announcements.map((news) => (
-                  <Link
-                    to={`/announcements/${news.slug}/`}
-                    onClick={this.handleClose}
-                  >
-                    <ListItem>
-                      <ListItemAvatar>
-                        <Avatar>
-                          <ViewHeadlineIcon className="icon-special" />
-                        </Avatar>
-                      </ListItemAvatar>
-                      <ListItemText
-                        primary={`${news.title}`}
-                        secondary={`${new Date(
-                          news.date_written
-                        ).toDateString()}`}
-                      />
-                    </ListItem>
-                    <MaterialDivider variant="inset" component="li" />
-                  </Link>
-                ))}
-              </List>
-              <div className="dialog-flex">
-                <Tooltip title="Close">
-                  <IconButton onClick={this.handleClose}>
-                    <CloseIcon />
-                  </IconButton>
-                </Tooltip>
-              </div>
-            </Dialog>
-            <Segment className="mt-2">
-              {this.state.profile !== null && (
-                <div>
-                  {this.state.profile.verified === false && (
-                    <Alert severity="warning">
-                      Please verify your email address
-                    </Alert>
+              <Container id="my-cont">
+                <Dialog
+                  fullScreen
+                  className="mobile"
+                  open={this.state.open}
+                  TransitionComponent={Transition}
+                >
+                  <List>
+                    {this.state.announcements.map((news) => (
+                      <Link
+                        to={`/announcements/${news.slug}/`}
+                        onClick={this.handleClose}
+                      >
+                        <ListItem>
+                          <ListItemAvatar>
+                            <Avatar>
+                              <ViewHeadlineIcon className="icon-special" />
+                            </Avatar>
+                          </ListItemAvatar>
+                          <ListItemText
+                            primary={`${news.title}`}
+                            secondary={`${new Date(
+                              news.date_written
+                            ).toDateString()}`}
+                          />
+                        </ListItem>
+                        <MaterialDivider variant="inset" component="li" />
+                      </Link>
+                    ))}
+                  </List>
+                  <div className="dialog-flex">
+                    <Tooltip title="Close">
+                      <IconButton onClick={this.handleClose}>
+                        <CloseIcon />
+                      </IconButton>
+                    </Tooltip>
+                  </div>
+                </Dialog>
+                <Segment className="mt-2">
+                  {this.state.profile !== null && (
+                    <div>
+                      {this.state.profile.verified === false && (
+                        <Alert severity="warning">
+                          Please verify your email address
+                        </Alert>
+                      )}
+                    </div>
                   )}
-                </div>
-              )}
-              {this.state.search ? (
-                <MangaSearch
-                  selected={this.changeSearchStatus}
-                  params={this.state.value}
-                />
-              ) : (
-                this.props.children
-              )}
-              <FooterPage />
-            </Segment>
-          </Container>
-        </Container>
+                  {this.state.search ? (
+                    <MangaSearch
+                      selected={this.changeSearchStatus}
+                      params={this.state.value}
+                    />
+                  ) : (
+                    this.props.children
+                  )}
+                  <FooterPage />
+                </Segment>
+              </Container>
+            </Container>
+          </Col>
+          <Col className="vanish" xs={2}>
+            <script
+              async
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5543476548341387"
+              crossorigin="anonymous"
+            ></script>
+
+            <ins
+              class="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-client="ca-pub-5543476548341387"
+              data-ad-slot="6622607966"
+              data-ad-format="auto"
+              data-full-width-responsive="true"
+            ></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          </Col>
+        </Row>
       </div>
     );
   }

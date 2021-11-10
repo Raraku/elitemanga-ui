@@ -6,6 +6,9 @@ button:focus {
   outline: none !important;
 }
 @media only screen and (min-width: 768px) {
+  .ui.six.cards:not(.excluded) {
+    flex-wrap: nowrap;
+  }
   .mobile {
     display: none !important;
   }
