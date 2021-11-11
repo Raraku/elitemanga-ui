@@ -468,7 +468,11 @@ class Layout extends React.Component {
           </AppBar>
         </div>
         <Row>
-          <Col className="vanish" xs={2}>
+          <Col
+            className="vanish text-center"
+            style={{ marginRight: "auto", marginLeft: "auto" }}
+            xs={2}
+          >
             <GoogleAds slot="6622607966" />
           </Col>
           <Col>
