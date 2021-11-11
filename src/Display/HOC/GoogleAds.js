@@ -1,14 +1,20 @@
-import React, { Component } from "react";
+import React, { Component, memo } from "react";
 
 class GoogleAds extends Component {
   componentDidMount() {
     (window.adsbygoogle = window.adsbygoogle || []).push({});
   }
+  isMobile =
+    Math.min(window.screen.width, window.screen.height) < 768 ||
+    navigator.userAgent.indexOf("Mobi") > -1;
 
   render() {
+    if (this.isMobile) {
+      return <></>;
+    }
     return (
       <ins
-        class="adsbygoogle"
+        class="adsbygoogle vanish"
         style={{ display: "block" }}
         data-ad-client="ca-pub-5543476548341387"
         data-ad-slot={this.props.slot}
@@ -19,4 +25,4 @@ class GoogleAds extends Component {
   }
 }
 
-export default GoogleAds;
+export default React.memo(GoogleAds);
