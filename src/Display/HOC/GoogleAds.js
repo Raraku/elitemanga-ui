@@ -9,6 +9,7 @@ class GoogleAds extends Component {
     navigator.userAgent.indexOf("Mobi") > -1;
 
   render() {
+    console.log(this.isMobile);
     if (this.isMobile) {
       return <></>;
     }
