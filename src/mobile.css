@@ -6,14 +6,14 @@ button:focus {
   outline: none !important;
 }
 @media only screen and (min-width: 768px) {
-  .ui.six.cards:not(.excluded) {
+  /* .ui.six.cards:not(.excluded) {
     flex-wrap: nowrap;
-  }
+  } */
   .mobile {
     display: none !important;
   }
   .fluid.image img {
-    height: 24em;
+    height: 22em;
   }
   .theaim img {
     width: auto !important;
@@ -43,6 +43,13 @@ button:focus {
   .fluid.image img {
     height: 230px !important;
     width: 100%;
+  }
+  .torino {
+    padding: 0px;
+  }
+  .torine {
+    margin-right: 0;
+    margin-left: 0;
   }
   .container,
   .container-sm {

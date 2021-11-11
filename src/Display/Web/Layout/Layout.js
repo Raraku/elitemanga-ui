@@ -467,15 +467,16 @@ class Layout extends React.Component {
             </Toolbar>
           </AppBar>
         </div>
-        <Row>
+        <Row className="torine">
           <Col
-            className="vanish text-center"
+            className="vanish  text-center"
             style={{ marginRight: "auto", marginLeft: "auto" }}
-            xs={2}
+            xs={0}
+            md={2}
           >
             <GoogleAds slot="6622607966" />
           </Col>
-          <Col>
+          <Col className="torino" xs={12} md={8}>
             <Container id="cont-1">
               {/* <Col className="coll-hidden" xs={1}>
             <Sidebar />
@@ -542,7 +543,7 @@ class Layout extends React.Component {
               </Container>
             </Container>
           </Col>
-          <Col className="vanish" xs={2}>
+          <Col className="vanish" xs={0} md={2}>
             <GoogleAds slot="6622607966" />
           </Col>
         </Row>

@@ -37,7 +37,7 @@ const Heroes = (props) => {
       </Card.Header>
       <Card.Body>
         <div>
-          <CardGroup itemsPerRow={6}>
+          <CardGroup className="semiExclude" itemsPerRow={6}>
             {!loading
               ? manga.map((manga) => (
                   <MangaIcon
