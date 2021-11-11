@@ -2,7 +2,9 @@ import React, { Component, memo } from "react";
 
 class GoogleAds extends Component {
   componentDidMount() {
-    (window.adsbygoogle = window.adsbygoogle || []).push({});
+    if (!this.isMobile) {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    }
   }
   isMobile =
     Math.min(window.screen.width, window.screen.height) < 768 ||
