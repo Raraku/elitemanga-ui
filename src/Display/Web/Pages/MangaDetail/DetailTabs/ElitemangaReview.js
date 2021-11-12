@@ -9,7 +9,7 @@ import {
   StatisticGroup,
   Statistic,
 } from "semantic-ui-react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, ProgressBar } from "react-bootstrap";
 import { Circle } from "react-circle";
 
 export default class AccordionExampleStandard extends React.Component {
@@ -30,73 +30,9 @@ export default class AccordionExampleStandard extends React.Component {
     if (elitemangareview) {
       return (
         <div>
-          <Accordion fluid styled>
-            <Accordion.Title
-              active={activeIndex === 0}
-              index={0}
-              onClick={this.handleClick}
-            >
-              <Icon name="dropdown" />
-              Entertainment Value
-            </Accordion.Title>
-            <Accordion.Content active={activeIndex === 0}>
-              <p
-                className="accordion-p"
-                dangerouslySetInnerHTML={{
-                  __html: elitemangareview.entertainment_value,
-                }}
-              ></p>
-            </Accordion.Content>
-            <Accordion.Title
-              active={activeIndex === 1}
-              index={1}
-              onClick={this.handleClick}
-            >
-              <Icon name="dropdown" />
-              Characters
-            </Accordion.Title>
-            <Accordion.Content active={activeIndex === 1}>
-              <p
-                className="accordion-p"
-                dangerouslySetInnerHTML={{
-                  __html: elitemangareview.characters,
-                }}
-              ></p>
-              <p>{elitemangareview.characters}</p>
-            </Accordion.Content>
-
-            <Accordion.Title
-              active={activeIndex === 2}
-              index={2}
-              onClick={this.handleClick}
-            >
-              <Icon name="dropdown" />
-              Plot
-            </Accordion.Title>
-            <Accordion.Content active={activeIndex === 2}>
-              <p
-                className="accordion-p"
-                dangerouslySetInnerHTML={{ __html: elitemangareview.plot }}
-              ></p>
-            </Accordion.Content>
-            <Accordion.Title
-              active={activeIndex === 3}
-              index={3}
-              onClick={this.handleClick}
-            >
-              <Icon name="dropdown" />
-              {this.props.media_type == 0 ? "Art Quality" : "Animation Quality"}
-            </Accordion.Title>
-            <Accordion.Content active={activeIndex === 3}>
-              <p
-                className="accordion-p"
-                dangerouslySetInnerHTML={{ __html: elitemangareview.quality }}
-              ></p>
-            </Accordion.Content>
-          </Accordion>
           <Row>
             <Col xs={12} md={6}>
-              <div className="mb-2 mt-5 d-flex review-div">
+              <div className="mb-2 d-flex review-div">
                 <div>
                   <div className="font-review">Entertainment Value</div>
                   <div>
@@ -151,7 +87,7 @@ export default class AccordionExampleStandard extends React.Component {
               </div>
             </Col>
             <Col xs={12} md={6}>
-              <StatisticGroup className="d-flex justify-content-center align-items-center">
+              <StatisticGroup className="d-flex justify-content-center">
                 <Statistic className="aii">
                   <Statistic.Value className="myhuge">
                     <Circle
@@ -181,3 +117,67 @@ export default class AccordionExampleStandard extends React.Component {
     }
   }
 }
+
+//  <Accordion fluid styled>
+//    <Accordion.Title
+//      active={activeIndex === 0}
+//      index={0}
+//      onClick={this.handleClick}
+//    >
+//      <Icon name="dropdown" />
+//      Entertainment Value
+//    </Accordion.Title>
+//    <Accordion.Content active={activeIndex === 0}>
+//      <p
+//        className="accordion-p"
+//        dangerouslySetInnerHTML={{
+//          __html: elitemangareview.entertainment_value,
+//        }}
+//      ></p>
+//    </Accordion.Content>
+//    <Accordion.Title
+//      active={activeIndex === 1}
+//      index={1}
+//      onClick={this.handleClick}
+//    >
+//      <Icon name="dropdown" />
+//      Characters
+//    </Accordion.Title>
+//    <Accordion.Content active={activeIndex === 1}>
+//      <p
+//        className="accordion-p"
+//        dangerouslySetInnerHTML={{
+//          __html: elitemangareview.characters,
+//        }}
+//      ></p>
+//    </Accordion.Content>
+
+//    <Accordion.Title
+//      active={activeIndex === 2}
+//      index={2}
+//      onClick={this.handleClick}
+//    >
+//      <Icon name="dropdown" />
+//      Plot
+//    </Accordion.Title>
+//    <Accordion.Content active={activeIndex === 2}>
+//      <p
+//        className="accordion-p"
+//        dangerouslySetInnerHTML={{ __html: elitemangareview.plot }}
+//      ></p>
+//    </Accordion.Content>
+//    <Accordion.Title
+//      active={activeIndex === 3}
+//      index={3}
+//      onClick={this.handleClick}
+//    >
+//      <Icon name="dropdown" />
+//      {this.props.media_type == 0 ? "Art Quality" : "Animation Quality"}
+//    </Accordion.Title>
+//    <Accordion.Content active={activeIndex === 3}>
+//      <p
+//        className="accordion-p"
+//        dangerouslySetInnerHTML={{ __html: elitemangareview.quality }}
+//      ></p>
+//    </Accordion.Content>
+//  </Accordion>;
