@@ -39,13 +39,11 @@ class Home extends React.Component {
     return (
       <Container className="dont-pad">
         <Helmet>
-          <title>
-            EliteManga - Find and read the best Manga and Anime online
-          </title>
+          <title>EliteManga - Find the best Manga and Anime online</title>
           <meta
             name="description"
             content="Find the best manga and anime. Comprehensively reviewed, selected and ranked by a team of experts from
-            the comfort of your devices"
+            the comfort of your devices."
           />
         </Helmet>
 
