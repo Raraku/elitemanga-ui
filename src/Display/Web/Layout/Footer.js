@@ -73,7 +73,16 @@ const FooterPage = (props) => {
           <div className="footer-b">
             <div className="footer-c">Contact us</div>
             <div className="footer-c">FAQ</div>
-            <div className="footer-c"></div>
+            <div className="footer-c">
+              Affliated Sites :{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://thewotguide.com"
+              >
+                TheWOTGuide
+              </a>
+            </div>
             <div className="footer-c"></div>
             <div className="footer-c last">Donate to us</div>
           </div>
