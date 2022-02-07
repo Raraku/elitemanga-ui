@@ -16,6 +16,7 @@ import Unreleased from "./Unreleased";
 import Hero from "./Hero";
 import Lists from "./Lists";
 import Heroes from "./Heroes";
+import TodayPick from "./TodayPick";
 
 class Home extends React.Component {
   constructor(props) {
@@ -39,17 +40,17 @@ class Home extends React.Component {
     return (
       <Container className="dont-pad">
         <Helmet>
-          <title>EliteManga - Find the best Manga and Anime online</title>
+          <title>Anime and Manga Reviews — Elitemanga </title>
           <meta
             name="description"
-            content="Find the best manga and anime. Comprehensively reviewed, selected and ranked by a team of experts from
-            the comfort of your devices."
+            content="Find reviews of the best manga and anime ever made. Know exactly what you're getting into and use our recommendations to find the best fit for you."
           />
         </Helmet>
+        <TodayPick />
 
         <Segment className="p-0 colorless">
           <HotManga />
-
+          <br />
           <HotAnime />
         </Segment>
 

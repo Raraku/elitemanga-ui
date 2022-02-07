@@ -29,7 +29,7 @@ const Latest = (props) => {
     <Card>
       <Card.Header>
         <Divider horizontal>
-          <Header className="need-theme" as="h5">
+          <Header className="need-light-theme" as="h3">
             <Icon name="rss" />
             Top Manga in serialization
           </Header>

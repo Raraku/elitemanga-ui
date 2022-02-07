@@ -11,6 +11,7 @@
   --header-color: #263238;
   --input-color: inherit;
   --background: white;
+  --lower-white: #ccc;
   --new-box: none;
   --nav-mobile-color: rgba(0, 0, 0, 0.54);
   --table-head: inherit;
@@ -40,6 +41,9 @@
 
 .need-theme {
   color: var(--theme-color) !important;
+}
+.need-light-theme {
+  color: var(--lower-white) !important;
 }
 
 .card-title,
@@ -213,7 +217,9 @@ i.search.icon {
 } */
 
 .navbar-nav > a {
-  color: inherit !important;
+  /* color: inherit !important; */
+  color: var(--lower-white) !important;
+  font-size: 1.1em;
 }
 
 .load-modal {
@@ -429,9 +435,15 @@ form {
   background-color: none;
 }
 
-.landing.card-header {
-  background-color: var(--color-surface) !important;
+.landing.card-header,
+.card-header {
+  /* background-color: var(--color-surface) !important; */
   border-bottom: none;
+  background-color: var(--theme-color) !important;
+  margin-bottom: 2em;
+  color: var(--color-surface);
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .landing-card.card-body {
@@ -542,7 +554,7 @@ div#my-cont {
 
 .ui.segment:not(.colorless) {
   /* border-top: 2px solid #21ba45 !important; */
-  border-top: 2px solid var(--theme-color) !important;
+  /* border-top: 2px solid var(--theme-color) !important; */
 }
 
 .lom {
@@ -1399,3 +1411,46 @@ label[for="upload-photo"] {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 75vw !important;
+  }
+}
+
+.card {
+  border: none !important;
+}
+
+.ui.card .image,
+.ui.cards > .card .image {
+  background: none !important;
+}
+
+.pickText {
+  margin-right: 1em;
+
+  background-color: var(--theme-color);
+  color: var(--lower-white);
+  padding: 0.7em;
+  border-radius: 0.15em;
+}
+
+.treso {
+  text-align: right;
+  display: flex;
+  position: absolute;
+  right: 1em;
+  top: 0.3em;
+  /* margin-bottom: -3rem; */
+  z-index: 20000;
+  justify-content: end;
+}
+
+/* .troeo {
+  position: relative;
+} */

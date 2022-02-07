@@ -19,7 +19,7 @@ class Favorites extends React.Component {
             <title>Favorites - EliteManga</title>
             <meta
               name="description"
-              content="Your favorite Mangas, all in one place. Accessible from any device"
+              content="Your favorite Manga and anime, all in one place. Accessible from any device"
             />
           </Helmet>
           <Paper>

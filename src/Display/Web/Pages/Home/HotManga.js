@@ -31,7 +31,7 @@ class HotManga extends React.Component {
       <Card>
         <Card.Header className="landing">
           <Divider horizontal>
-            <Header className="need-theme" as="h3">
+            <Header className="need-light-theme" as="h3">
               <Icon name="trophy" />
               Trending Manga this week
             </Header>

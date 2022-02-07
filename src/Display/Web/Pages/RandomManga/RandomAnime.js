@@ -86,7 +86,7 @@ const RandomManga = (props) => {
   return (
     <div>
       <Helmet>
-        <title>Random Anime - EliteManga</title>
+        <title>Random Anime Recommendation Engine - EliteManga</title>
         <meta
           name="description"
           content="Don't know what to read next? Click the button and our systems will

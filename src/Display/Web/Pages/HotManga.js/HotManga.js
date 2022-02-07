@@ -27,7 +27,7 @@ class HotManga extends React.Component {
           <title>Hot Manga- EliteManga</title>
           <meta
             name="description"
-            content="The hottest and most popular manga right now"
+            content="The most popular manga right now."
           />
         </Helmet>
         <div>

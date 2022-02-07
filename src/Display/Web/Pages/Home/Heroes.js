@@ -29,7 +29,7 @@ const Heroes = (props) => {
     <Card>
       <Card.Header>
         <Divider horizontal>
-          <Header className="need-theme" as="h5">
+          <Header className="need-light-theme" as="h3">
             <Icon name="rss" />
             Hallmark of Heroes
           </Header>
@@ -37,7 +37,7 @@ const Heroes = (props) => {
       </Card.Header>
       <Card.Body>
         <div>
-          <CardGroup className="semiExclude" itemsPerRow={6}>
+          <CardGroup className="semiExclude" itemsPerRow={5}>
             {!loading
               ? manga.map((manga) => (
                   <MangaIcon
