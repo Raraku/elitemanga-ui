@@ -13,7 +13,7 @@ button:focus {
     display: none !important;
   }
   .fluid.image img {
-    height: 20em;
+    height: 16em;
   }
   .theaim img {
     width: auto !important;
@@ -35,24 +35,26 @@ button:focus {
   .dont-pad {
     overflow-x: hidden;
   }
-  .landing.card-header, .card-header {
+  .landing.card-header,
+  .card-header {
     /* background-color: var(--color-surface) !important; */
 
-      border-radius: 0.5em  !important;
-      padding-top: 1em;
-      padding-bottom: 1em;
+    border-radius: 0.5em !important;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
 }
 @media only screen and (max-width: 768px) {
   .vanish {
     display: none !important;
   }
-  .landing.card-header, .card-header {
+  .landing.card-header,
+  .card-header {
     /* background-color: var(--color-surface) !important; */
 
-      border-radius: 0  !important;
-      padding-top: none;
-      padding-bottom: none;
+    border-radius: 0 !important;
+    padding-top: none;
+    padding-bottom: none;
   }
   .fluid.image img {
     height: 230px !important;
