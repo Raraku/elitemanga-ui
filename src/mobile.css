@@ -2,6 +2,9 @@
   /* --theme-color: #01258a71; */
   --theme-color: #2f273a;
 }
+.ijijis {
+  box-sizing: border-box;
+}
 button:focus {
   outline: none !important;
 }
